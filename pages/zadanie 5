@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX w HTML</title>
+    
+    <!-- MathJax -->
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Zadanie 5</h1>
+    
+    <h3>a)</h3>
+    <p>Samochód przejechał drogę długości  <span>\(120\ km\)</span>. Gdyby jechał ze średnią prędkością o \(30\ km/h\) większą, to czas jazdy byłby krótszy o \(54\) minuty. <br>Jaka była średnia prędkość samochodu?</br></p>
+    <div>sda</div>
+    
+    <p style="font-weight: 600;">Informacje z treści:</p>
+    
+    <li>przebyta droga  &RightArrow;     \(s=120\ km\)</li>
+    <li>średnia prędkość &rightarrow; \(v_{\text{śr}}=v+30\ km/h\)</li>
+    <li>czas jazdy &rightarrow; \(t_{\text{kr}}=t-54\ minuty\)</li>
+    <br></br>
+
+    <div class="divek">Najpierw zamieńmy minuty na godziny, żeby zgadzały się jednostki</div>
+    $$ 54\ minuty=\frac{54}{60}\ godziny=\frac{9}{10}\ godziny $$
+    <div class="divek">Znając wzór na czas w ruchu jednostajnym \(\left(t=\frac{s}{v}\right)\) i posługując się informacjami z treści zadania, możemy ułożyć poniższy układ równań:</div>
+    $$ 
+    \left\{
+    \begin{array}{1}
+        \frac{s}{v}=t \\
+        \frac{s}{v+30}=t-\frac{9}{10}
+    \end{array}
+    \right.
+    $$
+    <div class="divek">Teraz pozostało nam wyznaczyć \(v\) z jednego równania, które podstawimy pod drugie i rozwiążemy proste równanie kwadratowe.</div>
+    $$
+        \frac{s}{v}=t \implies \frac{s}{t}=v
+    $$
+    $$
+        \frac{s}{v+30}=t-\frac{9}{10} \implies \frac{s}{\frac{s}{t}+30}=t-\frac{9}{10}
+    $$
+    $$
+        s=\left(t-\frac{9}{10}\right)\left(\frac{s}{t}+30\right)
+    $$
+    <div></div>    
+    <h3>b)</h3>
+    <p>Samochód przejechał drogę z miasta <span>\(A\) do miasta <span>\(B\)</span> o długości </span>\(240\ km\)</span> ze średnią prędkością <span>\(v\).</span> W drodze powrotnej przez godzinę jechał ze średnią prędkością <span>\(v\)</span>, a następnie zwiększył prędkość o połowę, w rezultacie drogę powrotną przejechał w czasie o godzinę krótszym. <br>Wyznacz średnią prędkość <span>\(v\)</span>.</br> </p>
+</body>
+</html>
